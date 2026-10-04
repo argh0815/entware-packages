@@ -1,0 +1,26 @@
+diff --git a/package/libs/gettext-full/Makefile b/package/libs/gettext-full/Makefile
+index 410bad38..314a3465 100644
+--- a/package/libs/gettext-full/Makefile
++++ b/package/libs/gettext-full/Makefile
+@@ -73,7 +73,7 @@ export GNULIB_SRCDIR:=$(HOST_GNULIB_SRCDIR)
+ 
+ TARGET_CFLAGS += $(FPIC)
+ # Entware specifics: old toolchain
+-#TARGET_CFLAGS += -std=gnu23
++TARGET_CFLAGS += -std=gnu23
+ ifneq ($(HOST_OS),Linux)
+   TARGET_CFLAGS += -I$(STAGING_DIR_HOSTPKG)/include
+ endif
+diff --git a/toolchain/glibc/common.mk b/toolchain/glibc/common.mk
+index 263e7eb1..5311ff51 100644
+--- a/toolchain/glibc/common.mk
++++ b/toolchain/glibc/common.mk
+@@ -55,7 +55,7 @@ GLIBC_CONFIGURE:= \
+ 	unset LD_LIBRARY_PATH; \
+ 	BUILD_CC="$(HOSTCC)" \
+ 	$(TARGET_CONFIGURE_OPTS) \
+-	CFLAGS="-O2 $(filter-out -O%,$(call qstrip,$(TARGET_CFLAGS)))" \
++	CFLAGS="-O2 -fcommon $(filter-out -O%,$(call qstrip,$(TARGET_CFLAGS)))" \
+ 	libc_cv_slibdir="/lib" \
+ 	use_ldconfig=no \
+ 	$(HOST_BUILD_DIR)/$(GLIBC_PATH)configure \
