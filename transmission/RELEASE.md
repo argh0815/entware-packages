@@ -1,6 +1,6 @@
-# Transmission 4.1.3-1 for Entware x64-3.2
+# Transmission 4.1.4-1 for Entware x64-3.2
 
-Transmission 4.1.3 built for Entware x64-3.2 using GCC 14.3.0 and glibc 2.27.
+Transmission 4.1.4 built for Entware x64-3.2 using GCC 14.3.0 and glibc 2.27.
 
 ## Private GCC runtime
 

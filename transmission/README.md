@@ -1,4 +1,4 @@
-Transmission 4.1.3 for Entware x64-3.2
+Transmission 4.1.4 for Entware x64-3.2
 =======================================
 
 Target
@@ -6,7 +6,7 @@ Target
 Architecture: x64-3.2
 glibc:        2.27
 Compiler:     GCC 14.3.0
-Transmission: 4.1.3-1
+Transmission: 4.1.4-1
 
 This build uses a private GCC 14 runtime for Transmission under:
 
@@ -31,7 +31,7 @@ entware.patch
 
 packages.patch
     Transmission package changes:
-    - update Transmission to 4.1.3
+    - update Transmission to 4.1.4
     - remove obsolete miniupnpc compatibility patch
     - add glibc 2.27 compatibility patch
     - add private GCC runtime package
@@ -78,11 +78,11 @@ Packages are created under:
 
 Expected packages:
 
-    transmission-runtime_4.1.3-1_x64-3.2.ipk
-    transmission-daemon_4.1.3-1_x64-3.2.ipk
-    transmission-cli_4.1.3-1_x64-3.2.ipk
-    transmission-remote_4.1.3-1_x64-3.2.ipk
-    transmission-web_4.1.3-1_all.ipk
+    transmission-runtime_4.1.4-1_x64-3.2.ipk
+    transmission-daemon_4.1.4-1_x64-3.2.ipk
+    transmission-cli_4.1.4-1_x64-3.2.ipk
+    transmission-remote_4.1.4-1_x64-3.2.ipk
+    transmission-web_4.1.4-1_all.ipk
 
 Runtime design
 --------------
@@ -98,5 +98,5 @@ The private runtime contains:
 
 Normal Entware libraries continue to load from /opt/lib.
 
-This allows Transmission 4.1.3 to use the newer GCC 14 C++ runtime
+This allows Transmission 4.1.4 to use the newer GCC 14 C++ runtime
 without replacing Entware's global GCC runtime libraries.
